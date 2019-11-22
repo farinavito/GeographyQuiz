@@ -4,36 +4,33 @@ while True:
              "Hungary": "Budimpesta",
              "Italy": "Rome",
              "Austria": "Vienna",
-              "": ""}
+              }
 
     Africa = {"Algeria": "Algiers",
               "Angola": "Luanda",
               "Benin": "Portonovo",
               "Botswana": "Gaborone",
-              "": ""}
+              }
 
     Asia = {"Afganistan": "Kabul",
               "Armenia": "Yerevan",
               "Azerbaijan": "Baku",
               "Bahrain": "Manama",
-              "": ""}
+            }
 
 
     def query_cities(level):
         for country, capital_city in level.items():
-            end = list(level)
-            if country == end[-1]:
-                print("You have guessed all the questions!!!")
-                break
             question = input("What is the capital city of " + str(country) + "? ")
+            end_list = list(level)
+            if country == end_list[-1]:
+                return f"You have guessed all the questions for this continent!!!"
             correct_form_answer = question.capitalize()
             if correct_form_answer == f"{capital_city}":
                 print("Congrats")
                 continue
-            else:
-                print(f"Wrong! The capital city of {country} is {capital_city}.")
-            break
-        return
+            return f"Wrong! The capital city of {country} is {capital_city}."
+
 
     starter = input("Hello user! Please select the continent referring to quiz: [Europe, Asia, Africa] ")
     if starter.capitalize() == "Europe":
