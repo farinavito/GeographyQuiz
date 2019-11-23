@@ -33,18 +33,18 @@ while True:
 
 
     starter = input("Hello user! Please select the continent referring to quiz: [Europe, Asia, Africa] ")
-    if starter.capitalize() == "Europe":
+    if starter.lstrip().capitalize() == "Europe":
         print(query_cities(Europe))
-    elif starter.capitalize() == "Africa":
+    elif starter.lstrip().capitalize() == "Africa":
         print(query_cities(Africa))
-    elif starter.capitalize() == "Asia":
+    elif starter.lstrip().capitalize() == "Asia":
         print(query_cities(Asia))
     else:
         end = input("Wrong input. Would you like to continue [y/n]? ")
-        if end.lower() == "n":
+        if end.lstrip().lower() == "n":
             print("Bye")
             break
-        elif end.lower() == "y":
+        elif end.lstrip().lower() == "y":
             continue
         else:
             print("You have entered an invalid symbol. You will have to restart the program. Bye.")
