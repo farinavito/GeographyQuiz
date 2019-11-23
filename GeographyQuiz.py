@@ -1,21 +1,24 @@
 
 while True:
     Europe = {"Slovenia": "Ljubljana",
-             "Hungary": "Budimpesta",
+             "Hungary": "Budapest",
              "Italy": "Rome",
              "Austria": "Vienna",
+             "Germany": "Berlin",
               }
 
     Africa = {"Algeria": "Algiers",
               "Angola": "Luanda",
               "Benin": "Portonovo",
               "Botswana": "Gaborone",
+              "Egipt": "Kairo"
               }
 
     Asia = {"Afganistan": "Kabul",
               "Armenia": "Yerevan",
               "Azerbaijan": "Baku",
               "Bahrain": "Manama",
+                "Japan": "Tokyo"
             }
 
 
@@ -27,7 +30,15 @@ while True:
                 return f"You have guessed all the questions for this continent!!!"
             correct_form_answer = question.capitalize()
             if correct_form_answer == f"{capital_city}":
-                print("Congrats")
+                # print("Congrats")
+                if country == end_list[0]:
+                    print(f"That was easy.")
+                elif country == end_list[1]:
+                    print(f"Not impressed yet.")
+                elif country == end_list[2]:
+                    print(f"Damn you're good.")
+                elif country == end_list[3]:
+                    print(f"You're on fire!")
                 continue
             return f"Wrong! The capital city of {country} is {capital_city}."
 
