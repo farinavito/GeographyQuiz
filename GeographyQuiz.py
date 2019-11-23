@@ -21,24 +21,24 @@ while True:
                 "Japan": "Tokyo"
             }
 
+    comments = {0: "That was easy.",
+                1: "Not impressed yet.",
+                2: "Damn you're good.",
+                3: "You're on fire.",
+                4: "You should teach."}
+
 
     def query_cities(level):
         for country, capital_city in level.items():
             question = input("What is the capital city of " + str(country) + "? ")
-            end_list = list(level)
-            if country == end_list[-1]:
-                return f"You have guessed all the questions for this continent!!!"
-            correct_form_answer = question.capitalize()
+            correct_form_answer = question.lstrip().capitalize()
             if correct_form_answer == f"{capital_city}":
-                # print("Congrats")
-                if country == end_list[0]:
-                    print(f"That was easy.")
-                elif country == end_list[1]:
-                    print(f"Not impressed yet.")
-                elif country == end_list[2]:
-                    print(f"Damn you're good.")
-                elif country == end_list[3]:
-                    print(f"You're on fire!")
+                end_list = list(level)
+                for key, statement in comments.items():
+                    if country == end_list[-1]:
+                        return f"You have answered correctly to all the questions!!!"
+                    elif key == end_list.index(country):
+                        print(statement)
                 continue
             return f"Wrong! The capital city of {country} is {capital_city}."
 
