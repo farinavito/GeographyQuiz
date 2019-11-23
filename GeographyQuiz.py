@@ -1,10 +1,10 @@
 
 while True:
     Europe = {"Slovenia": "Ljubljana",
-             "Hungary": "Budapest",
-             "Italy": "Rome",
-             "Austria": "Vienna",
-             "Germany": "Berlin",
+              "Hungary": "Budapest",
+              "Italy": "Rome",
+              "Austria": "Vienna",
+              "Germany": "Berlin",
               }
 
     Africa = {"Algeria": "Algiers",
@@ -15,17 +15,18 @@ while True:
               }
 
     Asia = {"Afganistan": "Kabul",
-              "Armenia": "Yerevan",
-              "Azerbaijan": "Baku",
-              "Bahrain": "Manama",
-                "Japan": "Tokyo"
+            "Armenia": "Yerevan",
+            "Azerbaijan": "Baku",
+            "Bahrain": "Manama",
+            "Japan": "Tokyo"
             }
 
     comments = {0: "That was easy.",
                 1: "Not impressed yet.",
                 2: "Damn you're good.",
                 3: "You're on fire.",
-                4: "You should teach."}
+                4: "You should teach."
+                }
 
 
     def query_cities(level):
